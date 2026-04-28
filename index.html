@@ -15,6 +15,12 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 @keyframes twinkle{0%,100%{opacity:0.2;}50%{opacity:1;}}
 .container{position:relative;z-index:1;max-width:720px;margin:0 auto;padding:40px 20px 80px;}
 
+/* ① 戻るリンク */
+.back-link{display:inline-block;font-size:12px;color:rgba(201,168,76,0.5);text-decoration:none;letter-spacing:2px;margin-bottom:20px;transition:color 0.2s;}
+.back-link:hover{color:var(--gold);}
+.back-link-bottom{display:block;text-align:center;font-size:12px;color:rgba(201,168,76,0.4);text-decoration:none;letter-spacing:2px;margin:32px 0 16px;transition:color 0.2s;}
+.back-link-bottom:hover{color:var(--gold);}
+
 .header{text-align:center;margin-bottom:40px;}
 .site-name{font-family:'Cinzel',serif;font-size:11px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:16px;opacity:0.8;}
 .title{font-family:'Cinzel',serif;font-size:clamp(24px,6vw,36px);color:var(--gold2);letter-spacing:3px;margin-bottom:10px;}
@@ -86,23 +92,38 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 .di-key{font-size:10px;color:rgba(240,234,220,0.4);letter-spacing:1px;margin-bottom:6px;}
 .di-val{font-size:13px;color:var(--gold2);}
 
-/* 有料・バナー */
+/* 有料ブロック */
 .premium-block{background:linear-gradient(135deg,rgba(26,32,64,0.9),rgba(15,22,40,0.95));border:1px solid rgba(201,168,76,0.2);border-radius:16px;margin-bottom:16px;overflow:hidden;}
 .premium-header{padding:18px 28px;border-bottom:1px solid rgba(201,168,76,0.1);font-family:'Cinzel',serif;font-size:12px;color:var(--gold);letter-spacing:3px;display:flex;align-items:center;gap:10px;}
 .premium-badge{background:linear-gradient(135deg,var(--gold),#8a6a20);color:var(--navy);font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;}
 .premium-preview{padding:20px 28px;position:relative;min-height:90px;}
 .preview-text{font-size:14px;line-height:2;color:rgba(240,234,220,0.4);filter:blur(4px);user-select:none;pointer-events:none;}
 .premium-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 0%,rgba(10,14,26,0.92) 55%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:20px;}
-.unlock-btn{background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.5);border-radius:8px;color:var(--gold2);font-family:'Cinzel',serif;font-size:12px;letter-spacing:2px;padding:10px 24px;cursor:pointer;text-decoration:none;display:inline-block;}
+/* ④ ¥500ボタン → /star/mini に修正 */
+.unlock-btn{background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.5);border-radius:8px;color:var(--gold2);font-family:'Cinzel',serif;font-size:12px;letter-spacing:2px;padding:10px 24px;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s;}
+.unlock-btn:hover{background:rgba(201,168,76,0.2);transform:translateY(-1px);}
 
+/* 総合鑑定パック → ¥3,980に修正 */
 .bundle{background:linear-gradient(135deg,rgba(100,80,30,0.3),rgba(60,40,10,0.4));border:1px solid rgba(201,168,76,0.4);border-radius:16px;padding:32px;text-align:center;margin-bottom:20px;}
 .bundle-title{font-family:'Cinzel',serif;font-size:15px;color:var(--gold2);letter-spacing:3px;margin-bottom:10px;}
 .bundle-desc{font-size:13px;color:rgba(240,234,220,0.6);line-height:1.9;margin-bottom:20px;}
-.bundle-price{font-family:'Cinzel',serif;font-size:24px;color:var(--gold);margin-bottom:4px;}
+.bundle-price{font-family:'Cinzel',serif;font-size:28px;color:var(--gold);margin-bottom:4px;}
 .bundle-price-sub{font-size:12px;color:rgba(240,234,220,0.4);margin-bottom:20px;}
-.bundle-btn{background:linear-gradient(135deg,#8a6a20,var(--gold),#8a6a20);border:none;border-radius:8px;color:var(--navy);font-family:'Cinzel',serif;font-size:13px;font-weight:700;letter-spacing:2px;padding:14px 36px;cursor:pointer;}
+.bundle-btn{display:inline-block;background:linear-gradient(135deg,#8a6a20,var(--gold),#8a6a20);border:none;border-radius:8px;color:var(--navy);font-family:'Cinzel',serif;font-size:13px;font-weight:700;letter-spacing:2px;padding:14px 36px;cursor:pointer;text-decoration:none;transition:all 0.3s;}
+.bundle-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,168,76,0.3);}
 
-.footer{text-align:center;margin-top:60px;padding-top:30px;border-top:1px solid rgba(201,168,76,0.1);}
+/* ② おすすめ占いカード */
+.rec-section{margin-bottom:20px;}
+.rec-title{font-family:'Cinzel',serif;font-size:12px;color:var(--gold);letter-spacing:3px;text-align:center;margin-bottom:14px;opacity:0.8;}
+.rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.rec-card{background:linear-gradient(135deg,rgba(26,32,64,0.85),rgba(15,22,40,0.9));border:1px solid rgba(201,168,76,0.18);border-radius:12px;padding:16px 10px;text-align:center;text-decoration:none;display:block;transition:all 0.3s;}
+.rec-card:hover{transform:translateY(-3px);border-color:rgba(201,168,76,0.45);box-shadow:0 8px 20px rgba(0,0,0,0.3);}
+.rec-icon{font-size:24px;margin-bottom:6px;display:block;}
+.rec-name{font-size:12px;color:var(--white);font-weight:500;margin-bottom:4px;}
+.rec-desc{font-size:10px;color:rgba(240,234,220,0.45);line-height:1.5;}
+.rec-free{display:inline-block;font-size:9px;padding:2px 7px;border-radius:8px;background:rgba(26,122,60,0.1);color:#7ac4a0;border:1px solid rgba(26,122,60,0.2);margin-top:6px;font-family:'Cinzel',serif;}
+
+.footer{text-align:center;margin-top:40px;padding-top:30px;border-top:1px solid rgba(201,168,76,0.1);}
 .footer-logo{font-family:'Cinzel',serif;font-size:11px;color:var(--gold);letter-spacing:4px;opacity:0.5;margin-bottom:8px;}
 .footer-text{font-size:11px;color:rgba(240,234,220,0.25);}
 </style>
@@ -110,6 +131,9 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 <body>
 <div class="stars-bg" id="js-stars"></div>
 <div class="container">
+
+  <!-- ① ヘッダー直下の戻るリンク -->
+  <a href="https://twinkle-lab.jp/star" class="back-link">← 占いポータルトップ</a>
 
   <header class="header">
     <div class="site-name">✦ Twinkle Star Oracle ✦</div>
@@ -163,11 +187,12 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
     </div>
   </div>
 
+  <!-- ④ ¥500ボタン → /star/mini に修正 -->
   <div class="premium-block">
     <div class="premium-header">✦ 吉日・凶日の詳細と対策 <span class="premium-badge">PREMIUM</span></div>
     <div class="premium-preview">
       <p class="preview-text">今月の最大吉日と要注意日を詳しく解説します。吉日に何をすべきか、凶日にどう過ごすべきかの具体的なアドバイスと、あなたの星座に合わせた...</p>
-      <div class="premium-overlay"><a href="#" class="unlock-btn">✦ 詳細を見る（¥500）</a></div>
+      <div class="premium-overlay"><a href="https://twinkle-lab.jp/star/mini" class="unlock-btn">✦ 今すぐ詳しく見る（¥500）</a></div>
     </div>
   </div>
 
@@ -175,21 +200,50 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
     <div class="premium-header">✦ 今月の重要な転換日と開運行動 <span class="premium-badge">PREMIUM</span></div>
     <div class="premium-preview">
       <p class="preview-text">今月あなたに訪れる転換点となる重要な日を特定します。その日に何をすることで運気が最大化されるかを具体的にお伝えします。また月全体の...</p>
-      <div class="premium-overlay"><a href="#" class="unlock-btn">✦ 詳細を見る（¥500）</a></div>
+      <div class="premium-overlay"><a href="https://twinkle-lab.jp/star/mini" class="unlock-btn">✦ 今すぐ詳しく見る（¥500）</a></div>
     </div>
   </div>
 
+  <!-- 総合鑑定パック → ¥3,980・/star/sogoに修正 -->
   <div class="bundle">
-    <div class="bundle-title">✦ 総合鑑定パック ✦</div>
-    <p class="bundle-desc">開運カレンダー ＋ 数秘術 ＋ タロット<br>3つの視点からあなたの運命を深く読み解きます</p>
-    <div class="bundle-price">¥1,980</div>
-    <div class="bundle-price-sub">通常 ¥3,000 → 特別価格</div>
-    <button class="bundle-btn">✦ 総合鑑定を申し込む ✦</button>
+    <div class="bundle-title">✦ AI総合鑑定 ✦</div>
+    <p class="bundle-desc">ホロスコープ ＋ 四柱推命 ＋ タロット3枚 ＋ 数秘術<br>過去・現在・未来をAIが完全解析します</p>
+    <div class="bundle-price">¥3,980</div>
+    <div class="bundle-price-sub">即時表示 · PDFダウンロード付き · 🔒 安全な決済</div>
+    <a href="https://twinkle-lab.jp/star/sogo" class="bundle-btn">✦ AI総合鑑定を受ける ✦</a>
   </div>
+
+  <!-- ② おすすめ占い（総合鑑定パックの下） -->
+  <div class="rec-section">
+    <div class="rec-title">✦ あなたにおすすめの占い ✦</div>
+    <div class="rec-grid">
+      <a href="https://tarot-app-rouge.vercel.app" target="_blank" class="rec-card">
+        <span class="rec-icon">🃏</span>
+        <div class="rec-name">タロット占い</div>
+        <div class="rec-desc">今の状況をカードが教える</div>
+        <span class="rec-free">FREE</span>
+      </a>
+      <a href="https://numerology-app-lovat.vercel.app" target="_blank" class="rec-card">
+        <span class="rec-icon">🔢</span>
+        <div class="rec-name">数秘術</div>
+        <div class="rec-desc">運命数から使命を知る</div>
+        <span class="rec-free">FREE</span>
+      </a>
+      <a href="https://aicompat-app.vercel.app" target="_blank" class="rec-card">
+        <span class="rec-icon">💕</span>
+        <div class="rec-name">相性占い</div>
+        <div class="rec-desc">2人の運命スコアを算出</div>
+        <span class="rec-free">FREE</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ① フッター前の戻るリンク -->
+  <a href="https://twinkle-lab.jp/star" class="back-link-bottom">← 占いポータルトップに戻る</a>
 
   <footer class="footer">
     <div class="footer-logo">✦ TWINKLE STAR ORACLE ✦</div>
-    <p class="footer-text">© 2024 Twinkle Lab. All rights reserved.</p>
+    <p class="footer-text">© 2026 Twinkle Lab. All rights reserved.</p>
   </footer>
 </div>
 
