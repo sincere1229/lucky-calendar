@@ -86,7 +86,14 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 .di-key{font-size:10px;color:rgba(240,234,220,0.4);letter-spacing:1px;margin-bottom:6px;}
 .di-val{font-size:13px;color:var(--gold2);}
 
-/* ★ LINE導線（カレンダー詳細の下） */
+/* ★ 手相ナッジ */
+.teso-nudge{background:linear-gradient(135deg,rgba(232,160,192,0.12),rgba(180,100,160,0.06));border:1px solid rgba(232,160,192,0.25);border-radius:16px;padding:24px;margin-bottom:16px;text-align:center;}
+.teso-nudge-title{font-size:14px;color:rgba(240,234,220,0.9);font-weight:600;margin-bottom:10px;line-height:1.7;}
+.teso-nudge-body{font-size:12px;color:rgba(240,234,220,0.6);line-height:2;margin-bottom:16px;}
+.teso-nudge-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#06c755,#04a844);border:none;border-radius:10px;color:#fff;font-size:14px;font-weight:700;padding:14px 28px;text-decoration:none;transition:all 0.2s;}
+.teso-nudge-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(6,199,85,0.4);}
+
+/* LINE導線 */
 .line-block{background:linear-gradient(135deg,rgba(0,185,0,0.12),rgba(0,150,0,0.08));border:1px solid rgba(0,200,100,0.3);border-radius:16px;padding:24px 28px;margin-bottom:16px;text-align:center;}
 .line-block-title{font-size:13px;color:rgba(240,234,220,0.75);line-height:1.9;margin-bottom:16px;}
 .line-block-title strong{color:#4ede88;display:block;font-size:15px;margin-bottom:6px;}
@@ -94,44 +101,17 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 .line-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(6,199,85,0.4);}
 .line-btn-icon{font-size:20px;line-height:1;}
 
-/* ★ 有料ブロック */
-.premium-block{background:linear-gradient(135deg,rgba(26,32,64,0.9),rgba(15,22,40,0.95));border:1px solid rgba(201,168,76,0.2);border-radius:16px;margin-bottom:16px;overflow:hidden;}
-.premium-header{padding:18px 28px;border-bottom:1px solid rgba(201,168,76,0.1);font-family:'Cinzel',serif;font-size:12px;color:var(--gold);letter-spacing:3px;display:flex;align-items:center;gap:10px;}
-.premium-badge{background:linear-gradient(135deg,var(--gold),#8a6a20);color:var(--navy);font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;}
-.premium-preview{padding:20px 28px;position:relative;min-height:90px;}
-.preview-text{font-size:14px;line-height:2;color:rgba(240,234,220,0.4);filter:blur(4px);user-select:none;pointer-events:none;}
-.premium-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 0%,rgba(10,14,26,0.92) 55%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:20px;}
-
-/* ★ ¥500直課金ボタン */
-.unlock-btn-primary{
-  display:inline-block;
-  background:linear-gradient(135deg,#8a6a20,var(--gold),#8a6a20);
-  background-size:200% 100%;
-  border:none;
-  border-radius:10px;
-  color:var(--navy);
-  font-family:'Noto Serif JP',serif;
-  font-size:13px;
-  font-weight:700;
-  padding:13px 28px;
-  cursor:pointer;
-  text-decoration:none;
-  transition:all 0.3s;
-  animation:shimmer 3s ease-in-out infinite;
-}
-@keyframes shimmer{0%{background-position:0% center;}100%{background-position:200% center;}}
-.unlock-btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(201,168,76,0.5);}
-
-/* ★ 総合鑑定ブロック */
+/* ★ AI総合鑑定ブロック（統一版） */
 .bundle{background:linear-gradient(135deg,rgba(100,80,30,0.3),rgba(60,40,10,0.4));border:1px solid rgba(201,168,76,0.4);border-radius:16px;padding:32px;text-align:center;margin-bottom:16px;}
-.bundle-title{font-family:'Cinzel',serif;font-size:15px;color:var(--gold2);letter-spacing:3px;margin-bottom:10px;}
-.bundle-desc{font-size:13px;color:rgba(240,234,220,0.6);line-height:1.9;margin-bottom:20px;}
-.bundle-price{font-family:'Cinzel',serif;font-size:28px;color:var(--gold);margin-bottom:4px;}
-.bundle-price-sub{font-size:12px;color:rgba(240,234,220,0.4);margin-bottom:20px;}
+.bundle-label{font-family:'Cinzel',serif;font-size:10px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;opacity:0.8;}
+.bundle-title{font-family:'Cinzel',serif;font-size:16px;color:var(--gold2);letter-spacing:2px;margin-bottom:10px;}
+.bundle-desc{font-size:13px;color:rgba(240,234,220,0.7);line-height:1.9;margin-bottom:16px;}
+.bundle-price-orig{font-size:12px;color:rgba(240,234,220,0.4);text-decoration:line-through;margin-bottom:4px;}
+.bundle-price{font-family:'Cinzel',serif;font-size:30px;color:var(--gold);margin-bottom:4px;}
+.bundle-price-sub{font-size:11px;color:rgba(240,234,220,0.4);margin-bottom:20px;}
 .bundle-btn{display:block;width:100%;background:linear-gradient(135deg,#8a6a20,var(--gold),#8a6a20);border:none;border-radius:10px;color:var(--navy);font-family:'Noto Serif JP',serif;font-size:14px;font-weight:700;padding:16px 40px;cursor:pointer;text-decoration:none;transition:all 0.2s;}
 .bundle-btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(201,168,76,0.4);}
 
-/* ★ おすすめ占い */
 .rec-section{margin-bottom:20px;}
 .rec-title{font-family:'Cinzel',serif;font-size:11px;color:var(--gold);letter-spacing:3px;text-align:center;margin-bottom:14px;opacity:0.8;}
 .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
@@ -159,13 +139,11 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
     <p class="subtitle">Lucky Calendar</p>
   </header>
 
-  <!-- 星座選択 -->
   <div class="input-card">
     <div class="input-title">✦ あなたの星座を選んでください ✦</div>
     <div class="zodiac-mini-grid" id="js-zgrid"></div>
   </div>
 
-  <!-- カレンダー -->
   <div class="calendar-wrap">
     <div class="cal-header">
       <button class="cal-nav" id="js-prev">◀</button>
@@ -191,7 +169,6 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
     </div>
   </div>
 
-  <!-- 日別詳細 -->
   <div class="day-detail" id="js-detail">
     <div class="detail-date" id="js-d-date"></div>
     <div class="detail-luck" id="js-d-luck"></div>
@@ -204,7 +181,21 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
     </div>
   </div>
 
-  <!-- ★ LINE導線（カレンダー・詳細の下） -->
+  <!-- ★ 手相ナッジ（結果直下） -->
+  <div class="teso-nudge">
+    <div class="teso-nudge-title">🤲 より詳しく知りたい方へ</div>
+    <div class="teso-nudge-body">
+      この占いは"今の流れ"を示しますが、<br/>
+      あなたの本質や人生の流れは手相にも表れます。<br/>
+      無料手相診断では、左手と右手から<br/>
+      本来の自分と今の状態を読み解きます。
+    </div>
+    <a href="https://lin.ee/XHDFrA8" class="teso-nudge-btn" target="_blank" rel="noopener">
+      💬 LINEで無料手相診断を受ける
+    </a>
+  </div>
+
+  <!-- LINE導線 -->
   <div class="line-block">
     <div class="line-block-title">
       <strong>📅 今月の重要日を無料で受け取る</strong>
@@ -216,40 +207,20 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
     </a>
   </div>
 
-  <!-- ★ 有料ブロック① -->
-  <div class="premium-block">
-    <div class="premium-header">✦ 吉日・凶日の詳細と対策 <span class="premium-badge">PREMIUM</span></div>
-    <div class="premium-preview">
-      <p class="preview-text">今月の最大吉日と要注意日を詳しく解説します。吉日に何をすべきか、凶日にどう過ごすべきかの具体的なアドバイスと、あなたの星座に合わせた...</p>
-      <div class="premium-overlay">
-        <!-- ★ ① href="#" → /star/mini　⑤ CTA文言変更 -->
-        <a href="/star/mini" class="unlock-btn-primary">✦ この月で一番重要な日を知る（¥500）</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ★ 有料ブロック② -->
-  <div class="premium-block">
-    <div class="premium-header">✦ 今月の重要な転換日と開運行動 <span class="premium-badge">PREMIUM</span></div>
-    <div class="premium-preview">
-      <p class="preview-text">今月あなたに訪れる転換点となる重要な日を特定します。その日に何をすることで運気が最大化されるかを具体的にお伝えします。また月全体の...</p>
-      <div class="premium-overlay">
-        <!-- ★ ① href="#" → /star/mini　⑤ CTA文言変更 -->
-        <a href="/star/mini" class="unlock-btn-primary">✦ この月で一番重要な日を知る（¥500）</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ★ 総合鑑定（② onclick → /star/sogo） -->
+  <!-- ★ AI総合鑑定（統一文言・¥500削除・通常価格追加） -->
   <div class="bundle">
-    <div class="bundle-title">✦ AI総合鑑定 ✦</div>
-    <p class="bundle-desc">ホロスコープ ＋ 四柱推命 ＋ タロット3枚 ＋ 数秘術<br>過去・現在・未来をAIが完全解析します</p>
+    <div class="bundle-label">✦ Premium · AI完全解析 ✦</div>
+    <div class="bundle-title">AI総合鑑定（手相＋複数占術）</div>
+    <div class="bundle-desc">
+      手相・タロット・数秘術・ホロスコープなどを組み合わせ、<br/>
+      恋愛・仕事・金運・人生の流れを総合的に読み解きます
+    </div>
+    <div class="bundle-price-orig">通常¥4,980相当</div>
     <div class="bundle-price">¥3,980</div>
-    <div class="bundle-price-sub">即時表示 · PDFダウンロード付き · 🔒 安全な決済</div>
-    <button class="bundle-btn" onclick="window.location.href='/star/sogo'">✦ AI総合鑑定を受ける ✦</button>
+    <div class="bundle-price-sub">鑑定結果はLINEでお届け · PDF送付</div>
+    <button class="bundle-btn" onclick="window.location.href='/star/sogo'">✦ AI総合鑑定を申し込む ✦</button>
   </div>
 
-  <!-- ★ おすすめ占い（bundleの下）④ -->
   <div class="rec-section">
     <div class="rec-title">✦ Other Oracle ✦</div>
     <div class="rec-grid">
@@ -280,7 +251,6 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 </div>
 
 <script>
-// 星生成
 var starsEl = document.getElementById('js-stars');
 for (var i = 0; i < 100; i++) {
   var s = document.createElement('div');
@@ -352,7 +322,6 @@ var LUCK_DATA = [
 ];
 
 var ZODIAC_OFFSETS = {aries:0,taurus:3,gemini:7,cancer:11,leo:2,virgo:5,libra:9,scorpio:1,sagittarius:4,capricorn:8,aquarius:6,pisces:10};
-
 var selectedZodiac = 'aries';
 var currentYear, currentMonth;
 
@@ -386,39 +355,31 @@ function getLuckData(level) {
 function renderCalendar() {
   var title = currentYear + '年 ' + (currentMonth + 1) + '月';
   document.getElementById('js-cal-title').textContent = title;
-
   var cal = document.getElementById('js-cal');
   cal.innerHTML = '';
-
   var firstDay = new Date(currentYear, currentMonth, 1).getDay();
   var daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
   var today = new Date();
-
   for (var i = 0; i < firstDay; i++) {
     var empty = document.createElement('div');
     empty.className = 'cal-day empty';
     cal.appendChild(empty);
   }
-
   for (var d = 1; d <= daysInMonth; d++) {
     (function(day) {
       var level = getLuck(selectedZodiac, currentYear, currentMonth + 1, day);
       var ld = getLuckData(level);
       var dow = new Date(currentYear, currentMonth, day).getDay();
       var isToday = (currentYear === today.getFullYear() && currentMonth === today.getMonth() && day === today.getDate());
-
       var cell = document.createElement('div');
       cell.className = 'cal-day ' + ld.cls + (isToday ? ' today' : '');
-
       var numClass = dow === 0 ? 'day-num sun' : (dow === 6 ? 'day-num sat' : 'day-num');
       cell.innerHTML = '<span class="' + numClass + '">' + day + '</span><span class="day-emoji">' + ld.emoji + '</span><span class="day-luck" style="color:' + (level===5?'#e8c97a':level===4?'#7ac4a0':level===3?'#c4a8f0':level===1?'#e87a7a':'rgba(240,234,220,0.3)') + '">' + ld.label + '</span>';
-
       cell.addEventListener('click', function() {
         document.querySelectorAll('.cal-day.selected').forEach(function(el){ el.classList.remove('selected'); });
         cell.classList.add('selected');
         showDayDetail(day, level, ld, dow);
       });
-
       cal.appendChild(cell);
     })(d);
   }
@@ -427,13 +388,11 @@ function renderCalendar() {
 function showDayDetail(day, level, ld, dow) {
   var weekdays = ['日','月','火','水','木','金','土'];
   var seed = hash(selectedZodiac + currentYear + '-' + (currentMonth+1) + '-' + day);
-
   var title = ld.titles[seed % ld.titles.length];
   var msg = ld.msgs[seed % ld.msgs.length];
   var color = ld.colors[seed % ld.colors.length];
   var num = ld.nums[seed % ld.nums.length];
   var action = ld.actions[seed % ld.actions.length];
-
   document.getElementById('js-d-date').textContent = currentYear + '年' + (currentMonth+1) + '月' + day + '日（' + weekdays[dow] + '）';
   document.getElementById('js-d-luck').textContent = ld.emoji + ' ' + ld.label;
   document.getElementById('js-d-title').textContent = title;
@@ -441,13 +400,11 @@ function showDayDetail(day, level, ld, dow) {
   document.getElementById('js-d-color').textContent = color;
   document.getElementById('js-d-num').textContent = num;
   document.getElementById('js-d-action').textContent = action;
-
   var detail = document.getElementById('js-detail');
   detail.style.display = 'block';
   detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-// 星座グリッド生成
 var zgrid = document.getElementById('js-zgrid');
 for (var z = 0; z < ZODIACS.length; z++) {
   (function(zodiac) {
